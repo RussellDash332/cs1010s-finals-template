@@ -9,7 +9,7 @@ There is only CS1010S on the title because the questions are taken from the *wor
 
 ## General Notes
 + I will not focus on code tracing questions but still provide empty spaces for these questions. This is because the code has to be run line-by-line on Python Shell instead of IDE, thus it may give different results.
-+ I will definitely not put the final question in the template file (most of the students know why), but I will provide spaces for the other non-code questions like explaining why a certain part of the code does not work.
++ I will definitely not put the last question in the template file (most of the students know why), but I will provide spaces for the other non-code questions like explaining why a certain part of the code does not work or what's the time complexity of the code.
 + For each question that involves defining functions, I will provide the test cases provided in the PDF of the question paper, which I will not put here.
 + I will also provide the corresponding code appendixes on each end of the template file. Therefore, the list of built-in syntaxes such as `list.append(<item>)` will be excluded.
 + If you are reading this during finals, I wish you **all the best** for it!
