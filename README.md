@@ -115,5 +115,5 @@ There is only CS1010S on the title because the questions are taken from the *wor
         + foo bar sorting
 
 ## Final Technical Notes
-+ I will not put any testings related to OOP into a function because it will be hard to add an object and modify it, which it has to be eventually dedented. Other than that, I will indent them into a function such as `test_q3a()` or `test_q4()` if the cases has to be done in a single function.
++ I will indent almost all the testings into a function such as `test_q3a()` or `test_q4()`, depends on the situation.
 + Do not mind the shebang line on the top of each file, they won't affect anything right :)
