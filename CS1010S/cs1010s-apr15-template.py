@@ -134,6 +134,57 @@ def compare(number,got,expected):
         print(f'Expected {expected}, got {got}')
     print()
 
+# My own fly ADT, do not modify.
+fly_hive = []
+bee_hive = []
+
+def make_fly(name,male,colour,age):
+    fly = [name,male,colour,age]
+    if fly not in fly_hive:
+        fly_hive.append(fly)
+    if fly not in bee_hive and colour == 'yellow':
+        bee_hive.append(fly)
+    return fly
+
+def is_male(fly):
+    return fly[1]
+
+def eye_colour(fly):
+    return fly[2]
+
+def age(fly):
+    return fly[3]
+
+class Tagger:
+    def __init__(self):
+        self.tag = 0
+
+    def produce(self):
+        self.tag += 1
+        return str(self.tag)
+
+    def reset(self):
+        self.tag = 0
+
+tagger = Tagger()
+
+def breed(fly1, fly2):
+    tag_number = int(tagger.produce())
+    if tag_number % 2:
+        return ['Child '+str(tag_number),True,'white',0]
+    else:
+        return ['Child '+str(tag_number),False,'white',0]
+
+king_fly = make_fly('King',True,'white',100)
+queen_fly = make_fly('Queen',False,'white',90)
+fruit_fly = make_fly('Fruit',True,'red',80)
+russells_pet = make_fly('Fly',True,'white',70)
+zombie_fly = make_fly('Dead',False,'white',60)
+bee = make_fly('Impostor #1',True,'yellow',50)
+queen_bee = make_fly('Queen B',False,'yellow',40)
+king_bee = make_fly('King B',True,'yellow',30)
+sus_fly = make_fly('Impostor #2',True,'white',10)
+
 # Pro tip : drag all the lines that you want to comment/uncomment and press Alt+3/4
 def price(item): # only for the given test case(s)
     if item == '2A':
@@ -151,6 +202,49 @@ def test_q2b():
     print('='*20)
     compare(1,half_price_above_20('2A'),20)
     compare(2,half_price_above_20('2B'),15)
+
+def test_q3a():
+    print('Testing Question 3A...')
+    print('='*20)
+    compare(1,count_males(fly_hive),6)
+    compare(2,count_whites(fly_hive),5)
+    compare(3,count_males(bee_hive),2)
+    compare(4,count_whites(bee_hive),0)
+
+def test_q3b():
+    print('Testing Question 3B...')
+    print('='*20)
+    add = lambda x,y:x+y
+    multiply = lambda x,y:x*y
+    lst1 = [1,2,3,4,5]
+    lst2 = [5,4,3,2,1]
+    compare(1,map2(add,lst1,lst2),[6]*5)
+    compare(2,map2(add,lst1,lst1),[2,4,6,8,10])
+    compare(3,map2(multiply,lst1,lst2),[5,8,9,8,5])
+
+def test_q3c():
+    print('Testing Question 3C...')
+    print('='*20)
+    add = lambda x,y:x+y
+    multiply = lambda x,y:x*y
+    lst1 = [1,2,3,4,5,6]
+    lst2 = [5,4,3,2,1,0,9,8,7,6]
+    compare(1,mapx(add,lst1,lst2),[6]*6)
+    compare(2,mapx(add,lst1,lst1),[2,4,6,8,10,12])
+    compare(3,mapx(multiply,lst1,lst2),[5,8,9,8,5,0])
+    compare(4,mapx(multiply,lst1,lst2[::-1]),[6,14,24,36,0,6])
+
+def test_q3de():
+    print('Testing Question 3DE...')
+    print('='*20)
+    tagger.reset()
+    mid = len(fly_hive)//2
+    east_flies = fly_hive[:mid]
+    west_flies = fly_hive[mid:]
+    compare('cross breed',cross_breed(east_flies,west_flies),[['Child 1', True, 'white', 0], ['Child 2', False, 'white', 0], ['Child 3', True, 'white', 0]])
+    males = list(filter(is_male,fly_hive))
+    females = list(filter(lambda x: not is_male(x),fly_hive))
+    compare('cross breed age',cross_breed_age(males,females),{95.0: [['Child 4', False, 'white', 0]], 70.0: [['Child 5', True, 'white', 0]], 55.0: [['Child 6', False, 'white', 0]]})
 
 def test_q4b():
     print('Testing Question 4B...')
@@ -204,6 +298,10 @@ def test_q4d():
 
 test_q2a()
 test_q2b()
+test_q3a()
+test_q3b()
+test_q3c()
+test_q3de()
 test_q4b()
 test_q4c()
 test_q4d()
