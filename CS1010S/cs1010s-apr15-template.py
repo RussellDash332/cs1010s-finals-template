@@ -170,7 +170,11 @@ tagger = Tagger()
 
 def breed(fly1, fly2):
     tag_number = int(tagger.produce())
-    if tag_number % 2:
+    if tag_number % 6 == 0:
+        return ['Child '+str(tag_number),True,'yellow',0]
+    elif tag_number % 3 == 0:
+        return ['Child '+str(tag_number),False,'black',0]
+    elif tag_number % 2 == 0:
         return ['Child '+str(tag_number),True,'white',0]
     else:
         return ['Child '+str(tag_number),False,'white',0]
@@ -241,11 +245,55 @@ def test_q3de():
     mid = len(fly_hive)//2
     east_flies = fly_hive[:mid]
     west_flies = fly_hive[mid:]
-    compare('cross breed',cross_breed(east_flies,west_flies),[['Child 1', True, 'white', 0], ['Child 2', False, 'white', 0], ['Child 3', True, 'white', 0]])
+    result1 = cross_breed(east_flies,west_flies)
+    compare('cross breed',result1,[['Child 1', False, 'white', 0],
+                                   ['Child 2', True, 'white', 0],
+                                   ['Child 3', False, 'black', 0]])
+    tagger.reset()
+    
     males = list(filter(is_male,fly_hive))
     females = list(filter(lambda x: not is_male(x),fly_hive))
-    compare('cross breed age',cross_breed_age(males,females),{95.0: [['Child 4', False, 'white', 0]], 70.0: [['Child 5', True, 'white', 0]], 55.0: [['Child 6', False, 'white', 0]]})
+    result2 = cross_breed_age(males,females)
+    compare('cross breed age',result2,{95.0: [['Child 1', False, 'white', 0]],
+                                       70.0: [['Child 2', True, 'white', 0]],
+                                       55.0: [['Child 3', False, 'black', 0]]})
+    tagger.reset()
 
+    dummy_hive = []
+    def make_dummy_fly(male,age):
+        fly = ['Dummy '+str(len(dummy_hive)+1),male,'rainbow',age]
+        if fly not in dummy_hive:
+            dummy_hive.append(fly)
+        return fly
+
+    # male flies
+    dummy1 = make_dummy_fly(True,100)
+    dummy2 = make_dummy_fly(True,90)
+    dummy3 = make_dummy_fly(True,80)
+    dummy4 = make_dummy_fly(True,80)
+    dummy5 = make_dummy_fly(True,10)
+    dummy6 = make_dummy_fly(True,10)
+    dummy7 = make_dummy_fly(True,5)
+
+    # female flies
+    dummy8 = make_dummy_fly(False,60)
+    dummy9 = make_dummy_fly(False,50)
+    dummy10 = make_dummy_fly(False,40)
+    dummy11 = make_dummy_fly(False,40)
+    dummy12 = make_dummy_fly(False,30)
+    dummy13 = make_dummy_fly(False,30)
+
+    males2 = list(filter(is_male,dummy_hive))
+    females2 = list(filter(lambda x: not is_male(x),dummy_hive))
+    result3 = cross_breed_age(males2,females2)
+    compare('cross breed age again',result3,{80.0: [['Child 1', False, 'white', 0]],
+                                             70.0: [['Child 2', True, 'white', 0]],
+                                             60.0: [['Child 3', False, 'black', 0],
+                                                    ['Child 4', True, 'white', 0]],
+                                             20.0: [['Child 5', False, 'white', 0],
+                                                    ['Child 6', True, 'yellow', 0]]})
+    tagger.reset()
+    
 def test_q4b():
     print('Testing Question 4B...')
     print('='*20)
