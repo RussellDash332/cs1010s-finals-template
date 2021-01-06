@@ -192,14 +192,16 @@ def test_q2fg():
                 [True, False, True, False, True, False],
                 [True, False, True, True, True, False],
                 [True, True, True, True, True, True],
-                [True, True, True, False, True, True]]
+                [True, True, True, False, True, True]]
+
     figure_d = [[False, False, False, False, False, False],
                 [False, False, True, False, False, False],
                 [True, False, True, True, False, False],
                 [True, False, True, True, True, False],
                 [True, False, True, True, True, False],
                 [True, True, True, True, True, True],
-                [True, True, True, False, True, True]]
+                [True, True, True, False, True, True]]
+
     compare(4,drop(s,figure_a,2),True)
     compare(5,figure_a,figure_c)
     compare(6,drop(s,figure_a,2),True)
@@ -254,7 +256,7 @@ def test_q4c():
         ipod.store_song("Never Say Never", 10)  # Never Say Never stored
         print()                                 # 6 memory left
         
-        ipod.play_song("Our song")              # Playing Our song
+        ipod.play_song("Our Song")              # Playing Our Song
         print()
         
         ipod.store_song("Never Enough", 6)      # Not enough memory
@@ -273,7 +275,8 @@ def test_q4d():
         iphone = IPhone(256)
         iphone.call(98765432)                           # Calling number 98765432
         print()
-        iphone.play_song('Sha La La')                   # Sha La La not found
+        iphone.play_song('Sha La La')                   # Sha La La not found
+
         print()
         iphone.search("How to program with Python?")    # Searching How to program with Python?
         print()
