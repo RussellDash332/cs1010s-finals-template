@@ -178,7 +178,10 @@ def test_q2c():
 def test_q2e():
     print('Testing Question 2E...')
     print('='*20)
-    compare('X',zip([1, 2, 3], [4, 5, 6], [7, 8, 9, 10]),[(1, 4, 7), (2, 5, 8), (3, 6, 9)])
+    compare(1,zip([1, 2, 3], [4, 5, 6], [7, 8, 9, 10]),[(1, 4, 7), (2, 5, 8), (3, 6, 9)])
+    compare(2,zip([1, 2], [3, 4], [5, 6]),[(1 ,3, 5), (2, 4, 6)])
+    compare(3,zip([1, 2], [3, 4, 5], [6, 7, 8]),[(1 ,3, 6), (2, 4, 7)])
+    compare(4,zip([1, 9, 8, 7], [3], [2, 5, 4, 6, 10]),[(1 ,3, 2)])
 
 def test_q3a():
     print('Testing Question 3A...')
@@ -220,14 +223,16 @@ def test_q4c():
     try:
         police_evo = PoliceSportsCar(1.5)
         police_evo.toggle_nitro()
-        police_evo.drive(200)       # Vrooom! 120 km/h
+        police_evo.drive(200)       # Vrooom! 120 km/h
+
         print()
         police_evo.toggle_siren()
         police_evo.drive(200)       # Bee Doo Bee Doo
         print()                     # Vrooom! 120 km/h
         police_evo.toggle_nitro()
         police_evo.drive(200)       # Bee Doo Bee Doo
-        print()                     # Vrooom! 180.0 km/h
+        print()                     # Vrooom! 180.0 km/h
+
         police_evo.toggle_siren()
         police_evo.drive(200)       # Vrooom! 120 km/h
         print()
