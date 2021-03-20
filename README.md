@@ -1,5 +1,5 @@
 # CS1010S Finals Template 🐍
-
+<img alt="Python" src="https://img.shields.io/badge/python%20-%2314354C.svg?&style=for-the-badge&logo=python&logoColor=white"/>
 This repository provides the Python file (.py) template to the past CS1010S, CS1010X, and CS1010FC finals if one decides to do it using Python IDE.
 Regardless, in the real final examination, Python IDE is not allowed for use and students are to do it by hand, i.e. write the code down on paper or use Examplify and type it manually without any debugging/compiling if online.
 
