@@ -196,9 +196,9 @@ def test_q2c():
         ["Waikay", "2021-04-17", "1313"], ["Jon", "2021-04-29", "989"]
     ]
     add_block("Eshin", "2021-04-29", dummy_blockchain)
-    compare(1,dummy_blockchain,[["Ben", "2021-02-28", "815"], ["Kenghwee", "2021-04-01", "1456"], ["Waikay", "2021-04-17", "1313"], ["Jon", "2021-04-29", "989"],["Eshin", "2021-04-29", "1167"]])
+    compare(1,dummy_blockchain,[["Ben", "2021-02-28", "815"], ["Kenghwee", "2021-04-01", "1456"], ["Waikay", "2021-04-17", "1313"], ["Jon", "2021-04-29", "989"], ["Eshin", "2021-04-29", "1167"]])
     add_block("Wayaki", "2021-04-27", dummy_blockchain)
-    compare(2,dummy_blockchain,[["Ben", "2021-02-28", "815"], ["Kenghwee", "2021-04-01", "1456"], ["Waikay", "2021-04-17", "1313"], ["Jon", "2021-04-29", "989"],["Eshin", "2021-04-29", "1167"],["Wayaki", "2021-04-27", "1313"]])
+    compare(2,dummy_blockchain,[["Ben", "2021-02-28", "815"], ["Kenghwee", "2021-04-01", "1456"], ["Waikay", "2021-04-17", "1313"], ["Jon", "2021-04-29", "989"], ["Eshin", "2021-04-29", "1167"], ["Wayaki", "2021-04-27", "1313"]])
 
     another_dummy_blockchain = [
         ["Ben", "2021-02-28", "815"], ["Kenghwee", "2021-04-01", "1456"],
@@ -206,13 +206,13 @@ def test_q2c():
     ]
     add_block("Eshin", "2021-04-29", another_dummy_blockchain)
     add_block("Wayaki", "2021-04-30", another_dummy_blockchain)
-    compare(3,another_dummy_blockchain,[["Ben", "2021-02-28", "815"], ["Kenghwee", "2021-04-01", "1456"], ["Waikay", "2021-04-17", "1313"], ["Jon", "2021-04-29", "989"],["Eshin", "2021-04-29", "1167"],["Wayaki", "2021-04-30", "1307"]])
+    compare(3,another_dummy_blockchain,[["Ben", "2021-02-28", "815"], ["Kenghwee", "2021-04-01", "1456"], ["Waikay", "2021-04-17", "1313"], ["Jon", "2021-04-29", "989"], ["Eshin", "2021-04-29", "1167"], ["Wayaki", "2021-04-30", "1307"]])
 
 def test_q2d():
     print('Testing Question 2D...')
     print('='*20)
     dummy_blockchain = [["Ben", "2021-02-28", "768"], ["Eshin", "2021-04-29", "1162"], ["Wayaki", "2021-04-27", "1308"]]
-    broken_blockchain = [["Ben", "2021-02-28", "815"], ["Kenghwee", "2021-04-01", "1456"], ["Waikay", "2021-04-17", "1313"], ["Jon", "2021-04-29", "988"],["Eshin", "2021-04-29", "1167"], ["Wayaki", "2021-04-27", "1313"]]
+    broken_blockchain = [["Ben", "2021-02-28", "815"], ["Kenghwee", "2021-04-01", "1456"], ["Waikay", "2021-04-17", "1313"], ["Jon", "2021-04-29", "988"], ["Eshin", "2021-04-29", "1167"], ["Wayaki", "2021-04-27", "1313"]]
     another_blockchain = [["Ben", "2021-02-28", "768"], ["Eshin", "2021-04-29", "1162"], ["Wayaki", "2021-04-27", "1308"]]
     
     compare(1,is_valid(blockchain),False)
