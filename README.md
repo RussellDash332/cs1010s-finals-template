@@ -91,6 +91,10 @@ There is only CS1010S on the title because the questions are taken from the *wor
         + PSLE scoring
         + trie structure
         + Among Us OOP
+    + [April 2021](https://github.com/RussellDash332/cs1010s-finals-template/blob/main/CS1010S/cs1010s-apr21-template.py)
+        + Blockchain string hashing
+        + Scrabble tiles
+        + My Little Pony OOP
 
 ### CS1010X
 + [Back to top](https://github.com/RussellDash332/cs1010s-finals-template#shortcuts)
