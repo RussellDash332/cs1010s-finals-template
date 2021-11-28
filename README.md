@@ -33,7 +33,7 @@ Regardless, in the real final examination, Python IDE is not allowed for use and
     + **Question 5 *(not provided in the template file)*:** Course Reflection
 + Currently, this repository provides the template file for the following finals paper:
     |Source|Q2|Q3|Q4|
-    |:---:|:-:|:-:|:-:|
+    |:------|:-:|:-:|:-:|
     |[November 2013](https://github.com/RussellDash332/cs1010s-finals-template/blob/main/CS1010S/cs1010s-nov13-template.py)|list processing with f1-f5|limited count change|sparse and dense matrix OOP|
     |[April 2014](https://github.com/RussellDash332/cs1010s-finals-template/blob/main/CS1010S/cs1010s-apr14-template.py)|Harry Potter inventory ADT|Still Harry Potter inventory ADT|buddy robot OOP|
     |[November 2014](https://github.com/RussellDash332/cs1010s-finals-template/blob/main/CS1010S/cs1010s-nov14-template.py)|staircases and pyramids|secret message OOP|to infinity and beyond!|
@@ -44,9 +44,9 @@ Regardless, in the real final examination, Python IDE is not allowed for use and
     |[April 2017](https://github.com/RussellDash332/cs1010s-finals-template/blob/main/CS1010S/cs1010s-apr17-template.py)|Bingo|battleship|cars, trains, railcars OOP|
     |[November 2017](https://github.com/RussellDash332/cs1010s-finals-template/blob/main/CS1010S/cs1010s-nov17-template.py)|connect four (Toot and Otto)|containers|UberJiak planes OOP|
     |[April 2018](https://github.com/RussellDash332/cs1010s-finals-template/blob/main/CS1010S/cs1010s-apr18-template.py)|Jenga|T9 (text on 9 keys)|UberJiak vehicles OOP|
-    |[November 2018](https://github.com/RussellDash332/cs1010s-finals-template/blob/main/CS1010S/cs1010s-nov18-template.py)|weed growing|n-segment display (digital segments)|pickup truck OOP|
+    |[November 2018](https://github.com/RussellDash332/cs1010s-finals-template/blob/main/CS1010S/cs1010s-nov18-template.py)|weed growing|n-segment display<br>(digital segments)|pickup truck OOP|
     |[April 2019](https://github.com/RussellDash332/cs1010s-finals-template/blob/main/CS1010S/cs1010s-apr19-template.py)|tetrominos (Tetris)|family tree|IPod and IPhone OOP|
-    |[November 2019](https://github.com/RussellDash332/cs1010s-finals-template/blob/main/CS1010S/cs1010s-nov19-template.py)|Scrabble|Still Scrabble|sports and police car OOP (using siren and nitro)|
+    |[November 2019](https://github.com/RussellDash332/cs1010s-finals-template/blob/main/CS1010S/cs1010s-nov19-template.py)|Scrabble|Still Scrabble|sports and police car OOP<br>(using siren and nitro)|
     |[April 2020](https://github.com/RussellDash332/cs1010s-finals-template/blob/main/CS1010S/cs1010s-apr20-template.py)|COVID Sweeper (Minesweeper rip-off)|count change with memo|troopers OOP|
     |[November 2020](https://github.com/RussellDash332/cs1010s-finals-template/blob/main/CS1010S/cs1010s-nov20-template.py)|PSLE scoring|trie structure|Among Us OOP|
     |[April 2021](https://github.com/RussellDash332/cs1010s-finals-template/blob/main/CS1010S/cs1010s-apr21-template.py)|Blockchain string hashing|Scrabble tiles|My Little Pony OOP|
