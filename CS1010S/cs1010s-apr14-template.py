@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 ## CS1010S Apr14 Template
 
 ## Question 1A
@@ -81,7 +80,8 @@ def get_inventory_items(inv):
     return inv[1]
 
 # All items are "collected" into an inventory_list, so the user does
-# not need to know how the inventory list is actually implemented
+# not need to know how the inventory list is actually implemented
+
 def collect(items):
     return list(items)
 
@@ -165,11 +165,13 @@ def compare(number,got,expected):
 
 wands = [(1, 1), (2, 2), (3, 3), (4, -1), (5, 5)]
 potions = [(1, 1), (2, 1), (3, 1), (4, 1), (5, 5), (6, 6), (7, 7), (8, 8)]
-spells = [(1, 5), (2, -1), (3, 5), (4, 0), (5, -1)]
+spells = [(1, 5), (2, -1), (3, 5), (4, 0), (5, -1)]
+
 m_box = {'wands': [(1, 1), (2, 2), (3, 3), (4, -1), (5, 5)],
          'potions': [(1, 1), (2, 1), (3, 1), (4, 1), (5, 5), \
                      (6, 6), (7, 7), (8, 8)],
-         'spells': [(1, 5), (2, -1), (3, 5), (4, 0), (5, -1)]}
+         'spells': [(1, 5), (2, -1), (3, 5), (4, 0), (5, -1)]}
+
 
 def test_q2a():
     print('Testing Question 2A...')
@@ -201,7 +203,8 @@ def test_q3d():
     another_m_box = {'wands': [(1, 1), (2, 2), (3, 3), (4, -1), (5, 5)],
                      'potions': [(1, 1), (2, 1), (3, 1), (4, 1), (5, 5), \
                                  (6, 6), (7, 7), (8, 8)],
-                     'spells': [(1, 5), (2, -1), (3, 5), (4, 0), (5, -1)]}
+                     'spells': [(1, 5), (2, -1), (3, 5), (4, 0), (5, -1)]}
+
     new_box = sort_magical_items2(another_m_box)
     compare('the original box',another_m_box,{'wands': [(1, 1), (2, 2), (3, 3), (4, -1), (5, 5)],
                                               'potions': [(1, 1), (2, 1), (3, 1), (4, 1), (5, 5), \
@@ -210,7 +213,8 @@ def test_q3d():
     compare('the new box',new_box,{'potions': [(8, 8), (7, 7), (6, 6), (5, 5), (1, 1), (2, 1), (3, 1), (4, 1)],
                                    'wands': [(5, 5), (3, 3), (2, 2), (1, 1), (4, -1)],
                                    'spells': [(1, 5), (3, 5), (4, 0), (2, -1), (5, -1)]})
-    
+
+# Test case for Q2D will reveal the answer so not provided    
 test_q2a()
 test_q2b()
 test_q2c()

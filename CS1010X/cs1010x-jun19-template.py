@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 ## CS1010X Jun19 Template
 
 ## Question 1A

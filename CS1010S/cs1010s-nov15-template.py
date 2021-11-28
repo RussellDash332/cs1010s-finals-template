@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 ## CS1010S Nov15 Template
 
 ## Question 1A
@@ -47,7 +46,8 @@ def average(seq, key):
 def bmi(height, weight):
     pass # remove this line
 
-def avg_bmi(players):
+def avg_bmi(players):
+
     pass # remove this line
 
 ## Question 3A

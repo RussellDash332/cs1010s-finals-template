@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 ## CS1010S Nov18 Template
 
 ## Question 1A
@@ -41,9 +40,11 @@ def grow(field):
     for plot in field:              # Changes suggested in part E
         if plot-1 not in new:       # new[-1] < plot-1
             new.append(plot-1)
-        elif plot not in new:       # new[-1] < plot
+        elif plot not in new:       # new[-1] < plot
+
             new.append(plot)
-        elif plot+1 not in new:     # new[-1] < plot+1
+        elif plot+1 not in new:     # new[-1] < plot+1
+
             new.append(plot+1)
     field = new
 

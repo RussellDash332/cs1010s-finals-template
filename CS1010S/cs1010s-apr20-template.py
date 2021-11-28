@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 ## CS1010S Apr20 Template
 
 ## Question 1A
@@ -152,13 +151,16 @@ def test_q2b():
                                         (0, 0, 0, 1, 2, 3, 2),
                                         (1, 1, 0, 1, 1, 2, 1),
                                         (1, 1, 0, 0, 0, 1, 1),
-                                        (1, 1, 0, 0, 0, 0, 0)))
+                                        (1, 1, 0, 0, 0, 0, 0))
+)
 
 def test_q2c():
     print('Testing Question 2C...')
     print('='*20)
-    compare('safe paths',safe_paths(adjacent_grid(seq,6,7)),3)
-    compare('again',safe_paths(adjacent_grid(seq,10,13)),2211)
+    compare('safe paths',safe_paths(adjacent_grid(seq,6,7)),3
+)
+    compare('again',safe_paths(adjacent_grid(seq,10,13)),2211
+)
 
 def test_q3():
     print('Testing Question 3...')

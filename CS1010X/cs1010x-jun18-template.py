@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 ## CS1010X Jun18 Template
 
 ## Question 1A
@@ -48,7 +48,8 @@ def set_left(tree,x):
     tree[1]=x
     
 def set_right(tree,x):
-    tree[2]=x
+    tree[2]=x
+
 
 ## Question 2A
 def make_tree(lst):
@@ -101,7 +102,8 @@ For simplicity, the UndoList supports the following 4 methods:
 • set(n,x) – sets element at index n to x. Throws IndexError if index is out of
 bounds.
 • undo – reverses (undo) the last mutation (i.e. either append or set operation).
-• show – returns a list containing all the elements.
+• show – returns a list containing all the elements.
+
 """
 class UndoList:
     pass

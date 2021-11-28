@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 ## CS1010S Nov20 Template
 
 ## Question 1A
@@ -99,7 +98,8 @@ class Crewmate:
             print(task.name + ' already done')
         else:
             print('Doing ' + task.name)
-            task.done = True
+            task.done = True
+
 
 ## Question 4A
 """

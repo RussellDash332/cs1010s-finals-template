@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 ## CS1010FC Jun14 Template
 
 ## Question 1A
