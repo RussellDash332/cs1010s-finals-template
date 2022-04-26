@@ -212,7 +212,9 @@ def test_q2b():
     ]
 
     def close(l1, l2):
-        if not (len(l1) == len(l2) == 3):
+        if not l1 or not l2:
+            return False
+        elif not (len(l1) == len(l2) == 3):
             return False
         elif not (len(l1[0]) == len(l2[0])):
             return False
