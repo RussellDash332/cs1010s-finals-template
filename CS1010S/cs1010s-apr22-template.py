@@ -205,7 +205,25 @@ def test_q2b():
         [[0, 1, 0.2], [0.3, 0.6, 0], [0, 0, 0]],
     ]
 
-    compare(1, rgb_to_grayscale(image1), [[0.1, 1, 0.4], [0.1, 0.6, 0.3], [0, 0, 0.5]])
+    yet_another_image = [
+        [[1, 2, 4, 3], [0.1, 3, 2, 4], [1.1, 3.7, 2, 1]],
+        [[1, 0.5, 0.7, 1], [0, 0.6, 0.3, 0], [0, 0, 0.5, 0]],
+        [[0.1, 0.2, 0.1, 1.1], [0.2, 0.6, 0.1, 0.5], [1, 0.2, 0.5, 0.2]],
+    ]
+
+    def close(l1, l2):
+        if not (len(l1) == len(l2) == 3):
+            return False
+        elif not (len(l1[0]) == len(l2[0])):
+            return False
+        for i in range(3):
+            for j in range(len(l1[0])):
+                if abs(l1[i][j] - l2[i][j]) >= 1e-6:
+                    return False
+        return True
+
+    compare(1, close(rgb_to_grayscale(image1), [[0.1, 1, 0.4], [0.1, 0.6, 0.3], [0, 0, 0.5]]), True)
+    compare(2, close(rgb_to_grayscale(yet_another_image), [[0.7, 0.9, 1.6, 1.7], [0.1, 1.4, 0.8, 1.5], [0.7, 1.3, 1, 0.4]]), True)
     
 def test_q2c():
     print('Testing Question 2C...')
