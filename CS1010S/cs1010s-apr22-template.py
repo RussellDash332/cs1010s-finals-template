@@ -32,9 +32,6 @@ Answer here.
 
 
 ## Provided for Question 2
-from sklearn.preprocessing import scale
-
-
 image1 = [
     [[0.3, 1, 1], [0, 0.6, 0.6], [0, 0, 1]],
     [[0, 1, 0], [0, 0.6, 0.3], [0, 0, 0.5]],
