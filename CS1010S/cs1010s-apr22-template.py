@@ -249,7 +249,7 @@ def test_q2c():
                     [2, 2, 0, 0]]
     
     compare(1, crop(image2, 1, 1, 3, 2), [[0, 1], [1, 0], [1, 1]])
-    compare(2, crop(image2, 0, 2, 2, 2), [[0, 1], [1, 0], [1, 1]])
+    compare(2, crop(image2, 0, 2, 2, 2), [[1, 1], [1, 1]])
     compare(3, crop(candy_image, 1, 1, 3, 3), [[0, 3, 0], [2, 3, 2], [2, 3, 2]])
     compare(4, crop(candy_image, 3, 1, 1, 1), [[2]])
     compare(5, crop(candy2_image, 0, 0, 3, 3), [[1, 0, 0], [2, 2, 0], [3, 3, 3]])
@@ -440,9 +440,13 @@ def test_q4ab():
     
     T1 = Development()
     T2 = Testing()
+    T5 = Development()
+    T5.freeze_budget()
     try:
         compare(1, T1.canSpend(3000), True)
-        compare(2, T2.canSpend(2050), False)
+        compare(2, T2.canSpend(2050), True)
+        compare(3, T2.canSpend(5050), False)
+        compare(4, T5.canSpend(1001), False)
     except:
         compare("canSpend", "still have to implement a function correctly :)", "no error")
 
