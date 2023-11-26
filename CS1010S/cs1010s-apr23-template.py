@@ -186,7 +186,12 @@ def test_q2b():
     swap_rowcol(m2, 2, m1, -2)
     compare(3, m1, [['b', 'g', 'h'], [4, 3, 6], [7, 'i', 9]])
     compare(4, m2, [['a', 1, 'c'], ['d', 2, 'f'], ['e', 5, 8]])
-    
+    m3 = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]]
+    m4 = [['a', 'b', 'c', 'd'], ['e', 'f', 'g', 'h'], ['i', 'j', 'k', 'l'], ['m', 'n', 'o', 'p']]
+    swap_rowcol(m3, 1, m4, 3)
+    compare(5, m3, [[1, 2, 3, 4], ['d', 'h', 'l', 'p'], [9, 10, 11, 12], [13, 14, 15, 16]])
+    compare(6, m4, [['a', 'b', 'c', 5], ['e', 'f', 'g', 6], ['i', 'j', 'k', 7], ['m', 'n', 'o', 8]])
+
 def test_q2c():
     print('Testing Question 2C...')
     print('='*20)
@@ -199,6 +204,11 @@ def test_q2c():
     flip_rowcol(m2, 2, m1, -2)
     compare(3, m1, [['h', 'i', 'b'], [4, 1, 6], [7, 'g', 9]])
     compare(4, m2, [['a', 3, 'c'], ['d', 2, 'f'], [8, 5, 'e']])
+    m3 = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]]
+    m4 = [['a', 'b', 'c', 'd'], ['e', 'f', 'g', 'h'], ['i', 'j', 'k', 'l'], ['m', 'n', 'o', 'p']]
+    flip_rowcol(m3, 1, m4, 3)
+    compare(5, m3, [[1, 2, 3, 4], ['p', 'l', 'h', 'd'], [9, 10, 11, 12], [13, 14, 15, 16]])
+    compare(6, m4, [['a', 'b', 'c', 8], ['e', 'f', 'g', 7], ['i', 'j', 'k', 6], ['m', 'n', 'o', 5]])
 
 def test_q2d():
     print('Testing Question 2D...')
@@ -206,12 +216,17 @@ def test_q2d():
     m1 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
     m2 = [['a', 'b', 'c'], ['d', 'e', 'f'], ['g', 'h', 'i']]
     m3 = [['a', 'b', 'c'], ['d', 'e', 'f'], ['g', 'h', 'i']]
+    m4 = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]]
     rotate_ccw(m1)
     rotate_ccw(m2)
     compare(1, m1, [[3, 6, 9], [2, 5, 8], [1, 4, 7]])
     compare(2, m2 == m3, False)
     for _ in range(3): rotate_ccw(m2)
     compare(3, m2, m3)
+    rotate_ccw(m4)
+    compare(4, m4, [[4, 8, 12, 16], [3, 7, 11, 15], [2, 6, 10, 14], [1, 5, 9, 13]])
+    rotate_ccw(m4)
+    compare(5, m4, [[16, 15, 14, 13], [12, 11, 10, 9], [8, 7, 6, 5], [4, 3, 2, 1]])
 
 def test_q2e():
     print('Testing Question 2E...')
@@ -224,6 +239,13 @@ def test_q2e():
     back = [[37, 38, 39], [40, 41, 42], [43, 44, 45]]
     bottom = [[46, 47, 48], [49, 50, 51], [52, 53, 54]]
 
+    small_front = [[2*i+j for j in range(2)] for i in range(2)]
+    small_top = [[2*i+j+4 for j in range(2)] for i in range(2)]
+    small_left = [[2*i+j+8 for j in range(2)] for i in range(2)]
+    small_right = [[2*i+j+12 for j in range(2)] for i in range(2)]
+    small_back = [[2*i+j+16 for j in range(2)] for i in range(2)]
+    small_bottom = [[2*i+j+20 for j in range(2)] for i in range(2)]
+
     rotate_front_ccw(top, left, front, right, back, bottom)
     compare(1, front, [[3, 6, 9], [2, 5, 8], [1, 4, 7]])
     compare(2, top, [[10, 11, 12], [13, 14, 15], [28, 31, 34]])
@@ -231,6 +253,14 @@ def test_q2e():
     compare(4, right, [[48, 29, 30], [47, 32, 33], [46, 35, 36]])
     compare(5, back, [[37, 38, 39], [40, 41, 42], [43, 44, 45]])
     compare(6, bottom, [[21, 24, 27], [49, 50, 51], [52, 53, 54]])
+
+    rotate_front_ccw(small_top, small_left, small_front, small_right, small_back, small_bottom)
+    compare(7, small_front, [[1, 3], [0, 2]])
+    compare(8, small_top, [[4, 5], [12, 14]])
+    compare(9, small_left, [[8, 7], [10, 6]])
+    compare(10, small_right, [[21, 13], [20, 15]])
+    compare(11, small_back, [[16, 17], [18, 19]])
+    compare(12, small_bottom, [[9, 11], [22, 23]])
 
 def test_q3a():
     print('Testing Question 3A...')

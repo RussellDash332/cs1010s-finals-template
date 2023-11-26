@@ -53,7 +53,7 @@ Regardless, in the real final examination, Python IDE is not allowed for use and
     |[November 2021](CS1010S/cs1010s-nov21-template.py)|Dalgona candy|Rock papers scissors|Student Worker OOP|
     |[April 2022](CS1010S/cs1010s-apr22-template.py)|Image processing|DNA fragments|TDD Team OOP|
     |[November 2022](CS1010S/cs1010s-nov22-template.py)|Pallankuzhi Board Game|Inventory and catalog|Maritime shipping OOP|
-    |[April 2023](CS1010S/cs1010s-nov23-template.py)|Rubik's Cube|Library books|NUS Staff OOP|
+    |[April 2023](CS1010S/cs1010s-apr23-template.py)|Rubik's Cube|Library books|NUS Staff OOP|
 
 ### CS1010X
 + [Back to top](#shortcuts)
