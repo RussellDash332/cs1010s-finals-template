@@ -74,7 +74,7 @@ DoI = get_today()
 ## Question 3A
 def is_available(ledger, book):
     pass # remove this line
-    
+
 ## Question 3B
 def borrow_book(ledger, borrower, book):
     pass # remove this line
