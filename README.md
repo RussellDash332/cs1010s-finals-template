@@ -55,6 +55,7 @@ Regardless, in the real final examination, Python IDE is not allowed for use and
     |[CS1010S November 2022](CS1010S/cs1010s-nov22-template.py)|Pallankuzhi Board Game|Inventory and catalog|Maritime shipping OOP|
     |[CS1010S April 2023](CS1010S/cs1010s-apr23-template.py)|Rubik's Cube|Library books|NUS Staff OOP|
     |[CS1010A November 2023](CS1010A/cs1010a-nov23-template.py)|Queues|Snakes and Ladders|Star Wars TESB OOP|
+    |[CS1010S November 2023](CS1010S/cs1010s-nov23-template.py)|Networks|Student Database|TotK OOP|
 
 ### CS1010X
 + [Back to top](#shortcuts)
